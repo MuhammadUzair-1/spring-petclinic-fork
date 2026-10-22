@@ -125,6 +125,7 @@ jobs:
         run: |
           ssh -i ~/.ssh/ec2_key \
             -o StrictHostKeyChecking=accept-new \
+            -o IdentitiesOnly=yes
             "ubuntu@${EC2_HOST}" \
             'set -e
              sudo apt-get update
